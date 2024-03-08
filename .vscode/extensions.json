@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "taichi.vscode-textlint",
+        "james-yu.latex-workshop",
+        "usernamehw.errorlens",
+        "yzhang.markdown-all-in-one",
+        "davidanson.vscode-markdownlint"
+    ]
+}
