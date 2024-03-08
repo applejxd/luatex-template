@@ -1,12 +1,17 @@
-# VSCode + LuaLaTeX + bibtex + Textlinkt テンプレート
+# VSCode + LuaLaTeX + bibtex + Textlint テンプレート
 
 ## 環境構築
 
 ```ps1
+# TeX Live インストール (あればスキップ)
+choco install texlive
+
+# TLShell TeX Live Manager で拡張インストール
+
 # Node.js インストール (あればスキップ)
 winget install OpenJS.NodeJS.LTS
 
-# Powershell をリロード
+# Node.js ロードのために Powershell をリロード
 
 # Textlint 導入
 npm init -y
@@ -17,5 +22,4 @@ npm install --save-dev `
     textlint-rule-spellcheck-tech-word `
     textlint-plugin-latex2e
 npx textlint --init
-
 ```
