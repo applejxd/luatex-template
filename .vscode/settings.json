@@ -1,0 +1,36 @@
+{
+    "editor.formatOnSave": true,
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "Paper(ja)",
+            "tools": [
+                "lualatex(ja)",
+                "bibtex",
+                "lualatex(ja)",
+                "lualatex(ja)"
+            ]
+        },
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "lualatex(ja)",
+            "command": "lualatex",
+            "args": [
+                "-synctex=1",
+                "-halt-on-error",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=%OUTDIR%",
+                "%DOC_EXT%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+}
