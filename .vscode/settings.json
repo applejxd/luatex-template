@@ -1,26 +1,44 @@
 {
+    "editor.tabSize": 2,
     "editor.formatOnSave": true,
+    // スニペット補完中にも補完を使用
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    // json でコメント有効化
+    "files.associations": {
+        "*.json": "jsonc",
+        ".textlintrc": "jsonc"
+    },
+    //----------//
+    // textlint //
+    //----------//
+    "textlint.autoFixOnSave": true,
+    "textlint.run": "onSave",
+    //-------//
+    // LaTeX //
+    //-------//
+    // タイプセット定義
     "latex-workshop.latex.recipes": [
         {
-            "name": "Paper(ja)",
+            "name": "lualatex",
             "tools": [
-                "lualatex(ja)",
+                "lualatex",
                 "bibtex",
-                "lualatex(ja)",
-                "lualatex(ja)"
+                "lualatex",
+                "lualatex"
             ]
         },
     ],
+    // コマンド定義
     "latex-workshop.latex.tools": [
         {
-            "name": "lualatex(ja)",
+            "name": "lualatex",
             "command": "lualatex",
             "args": [
-                "-synctex=1",
-                "-halt-on-error",
-                "-interaction=nonstopmode",
+                "--cmdx",
                 "-file-line-error",
-                "-output-directory=%OUTDIR%",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-halt-on-error",
                 "%DOC_EXT%"
             ],
             "env": {}

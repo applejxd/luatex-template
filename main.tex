@@ -1,19 +1,48 @@
 \documentclass[a4paper,10pt]{ltjsarticle}
 
+% 各種字体
+% cf. http://www.yamamo10.jp/yamamoto/comp/latex/make_doc/formula/amsmath_symbol/index.php
 \usepackage{amsmath,amssymb,amsfonts}
+% 定番スニペット
+% cf. https://mirrors.ctan.org/macros/latex/contrib/physics2/physics2.pdf
 \usepackage{physics2}
 
-\usepackage{framed,graphicx,xcolor}
+% 画像挿入
+\usepackage{graphicx}
+% ハイパーリンク, URL 挿入
+\usepackage{hyperref,url}
 
-\usepackage{hyperref}
-\usepackage{url}
-\usepackage{bookmark}
+% 改ページできるフレーム
+\usepackage{framed}
+% 色付き文字
+\usepackage{xcolor}
+
+% ページ数を消す
+% \pagestyle{empty}
 
 \begin{document}
 
-\LaTeX てすと~\cite{maldacena1999large}
+\section{サンプル}
+
+\LaTeX。
+% 助詞の連続のエラー例
+textlint で文法ががェックできます。
+% である・ですます のエラー例
+本日はは晴天である。
+AdS/CFT~\cite{maldacena1999large}
+の概要を図~\ref{fig:adscft}に示します。
+
+\begin{figure}[tbp]
+  \begin{center}
+    \includegraphics[width=8cm]{img/sample.png}
+    \caption{AdS/CFT対応の概念図~\cite{adscftwiki}}
+  \end{center}
+  \label{fig:adscft}
+\end{figure}
 
 \bibliography{reference}
-\bibliographystyle{plain}
+% 掲載順=引用順
+% cf. https://mathlandscape.com/latex-bibstyles/
+\bibliographystyle{unsrt}
 
 \end{document}

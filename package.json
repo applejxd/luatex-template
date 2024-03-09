@@ -1,0 +1,20 @@
+{
+  "name": "luatex-template",
+  "version": "1.0.0",
+  "description": "```ps1\r # Node.js インストール (あればスキップ)\r winget install OpenJS.NodeJS.LTS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "textlint": "^14.0.3",
+    "textlint-plugin-latex2e": "^1.2.1",
+    "textlint-rule-preset-ja-spacing": "^2.3.0",
+    "textlint-rule-preset-ja-technical-writing": "^10.0.1",
+    "textlint-rule-preset-jtf-style": "^2.3.14",
+    "textlint-rule-spellcheck-tech-word": "^5.0.0"
+  }
+}

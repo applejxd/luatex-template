@@ -17,8 +17,9 @@ winget install OpenJS.NodeJS.LTS
 npm init -y
 npm install --save-dev `
     textlint `
-    textlint-rule-preset-ja-spacing `
     textlint-rule-preset-ja-technical-writing `
+    textlint-rule-preset-jtf-style `
+    textlint-rule-preset-ja-spacing `
     textlint-rule-spellcheck-tech-word `
     textlint-plugin-latex2e
 npx textlint --init
