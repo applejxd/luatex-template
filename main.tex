@@ -3,9 +3,16 @@
 % 各種字体
 % cf. http://www.yamamo10.jp/yamamoto/comp/latex/make_doc/formula/amsmath_symbol/index.php
 \usepackage{amsmath,amssymb,amsfonts}
+
 % 定番スニペット
 % cf. https://mirrors.ctan.org/macros/latex/contrib/physics2/physics2.pdf
 \usepackage{physics2}
+% automatic braces
+\usephysicsmodule{ab}
+
+% 単位
+% cf. http://www.yamamo10.jp/yamamoto/comp/latex/make_doc/unit/index.php
+\usepackage{siunitx}
 
 % 画像挿入
 \usepackage{graphicx}
@@ -16,6 +23,15 @@
 \usepackage{framed}
 % 色付き文字
 \usepackage{xcolor}
+
+%---------------%
+% 適宜切り替える %
+%---------------%
+
+% 、。と ,. の切り替え (LuaLaTeX 専用)
+\usepackage{newunicodechar}
+\newunicodechar{、}{，}
+\newunicodechar{。}{．}
 
 % ページ数を消す
 % \pagestyle{empty}

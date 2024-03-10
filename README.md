@@ -13,8 +13,9 @@ winget install OpenJS.NodeJS.LTS
 
 # Node.js ロードのために Powershell をリロード
 
-# Textlint 導入
+# Textlint 導入 (初回)
 npm init -y
+# --save-dev で package.json に追加
 npm install --save-dev `
     textlint `
     textlint-rule-preset-ja-technical-writing `
@@ -23,4 +24,7 @@ npm install --save-dev `
     textlint-rule-spellcheck-tech-word `
     textlint-plugin-latex2e
 npx textlint --init
+
+# Textlint 導入 (2回目以降)
+npm install
 ```
