@@ -26,5 +26,6 @@ npm install --save-dev `
 npx textlint --init
 
 # Textlint 導入 (2回目以降)
+# package.json を参照してインストール
 npm install
 ```
