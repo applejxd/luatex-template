@@ -1,0 +1,15 @@
+// cf. https://migi.me/vsc_snippet/
+{
+  "figure": {
+    "prefix": "figure(center)",
+    "body": [
+      "\\begin{figure}[tbp]",
+      "  \\begin{center}",
+      "    \\includegraphics[width=8cm]{img/${1:img}.png}",
+      "    \\caption{${2:caption}}\\label{fig:$1}",
+      "  \\end{center}",
+      "\\end{figure}",
+    ],
+    "description": "figure(center)"
+  }
+}

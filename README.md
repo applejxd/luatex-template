@@ -29,3 +29,15 @@ npx textlint --init
 # package.json を参照してインストール
 npm install
 ```
+
+## フォルダ構造
+
+- .vscode
+  - extensions.json: 拡張機能一覧
+  - settings.json: 各種設定
+  - tex.code-snippets: スニペット
+- img: 画像保存フォルダ
+- .textlintrc: textlint設定
+- main.tex: LuaLaTeXテンプレート
+- package.json: Node.js環境ファイル
+- reference.bib: 参考文献
