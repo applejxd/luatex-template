@@ -16,6 +16,8 @@
 
 % 画像挿入
 \usepackage{graphicx}
+% 表のボーダー
+\usepackage{booktabs}
 % ハイパーリンク, URL 挿入
 \usepackage{hyperref,url}
 
@@ -95,6 +97,7 @@ textlint で文法ががェックできます。
 本日はは晴天である。
 AdS/CFT~\cite{maldacena1999large}
 の概要を図~\ref{fig:adscft}に示します。
+表の作り方を表~\ref{tab:sample}に示す。
 アルゴリズム体操はアルゴリズム~\ref{alg:excersise}に示します。
 インラインのコードブロックは\lstinline|sudo apt update|で書けます。
 
@@ -106,6 +109,21 @@ AdS/CFT~\cite{maldacena1999large}
   \end{center}
   \label{fig:adscft}
 \end{figure}
+
+% 表の例
+\begin{table}[tbp]
+  \begin{center}
+    \begin{tabular}{lcc}
+      \toprule
+      hoge & fuga & piyo \\
+      \midrule
+      A    & B    & C    \\
+      \bottomrule
+    \end{tabular}
+    \caption{表の例}
+  \end{center}
+  \label{tab:sample}
+\end{table}
 
 % アルゴリズムの例
 \begin{figure}[tbp]

@@ -1,7 +1,7 @@
 // cf. https://migi.me/vsc_snippet/
 {
   "figure": {
-    "prefix": "figure(center)",
+    "prefix": "\\figure(center)",
     "body": [
       "\\begin{figure}[tbp]",
       "  \\begin{center}",
@@ -11,5 +11,24 @@
       "\\end{figure}",
     ],
     "description": "figure(center)"
-  }
+  },
+  "table": {
+    "prefix": "\\table(center)",
+    "body": [
+      "\\begin{table}[tbp]",
+      "  \\begin{center}",
+      "    \\begin{tabular}{${1:lcc}}",
+      "      \\toprule",
+      "      $4 & & \\\\",
+      "      \\midrule",
+      "      & & \\\\",
+      "      \\bottomrule",
+      "    \\end{tabular}",
+      "    \\caption{$2}",
+      "  \\end{center}",
+      "  \\label{tab:$3}",
+      "\\end{table}",
+    ],
+    "description": ""
+  },
 }
