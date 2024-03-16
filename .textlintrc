@@ -3,7 +3,10 @@
     // TeX 対応
     "latex2e": true
   },
-  "filters": {},
+  "filters": {
+    // % textlint-disable で無効化
+    "comments": true
+  },
   "rules": {
     // cf. https://github.com/textlint-ja/extlint-rule-preset-ja-technical-writing
     "preset-ja-technical-writing": {
@@ -16,6 +19,9 @@
     // スペース設定
     // cf. https://github.com/textlint-ja/textlint-rule-preset-ja-spacing
     "preset-ja-spacing": true,
-    "spellcheck-tech-word": true
+    "@proofdict/proofdict": {
+      // "dictURL": "https://azu.github.io/proof-dictionary/",
+      "dictGlob": "./dict/*.yml"
+    }
   }
 }

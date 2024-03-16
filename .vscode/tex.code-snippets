@@ -5,7 +5,7 @@
     "body": [
       "\\begin{figure}[tbp]",
       "  \\begin{center}",
-      "    \\includegraphics[width=8cm]{img/${1:img}.png}",
+      "    \\includegraphics[width=11cm]{img/${1:img}.png}",
       "    \\caption{${2:caption}}\\label{fig:$1}",
       "  \\end{center}",
       "\\end{figure}",
@@ -30,5 +30,15 @@
       "\\end{table}",
     ],
     "description": ""
+  },
+  // 選択して補完で textlint 無効
+  // cf. https://zenn.dev/oksongh/scraps/0c7046ef265941
+  "textlint-disable": {
+    "prefix": "textlint-disable",
+    "body": [
+      "% textlint-disable",
+      "$TM_SELECTED_TEXT",
+      "% textlint-enable"
+    ]
   },
 }

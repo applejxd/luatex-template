@@ -18,11 +18,12 @@ npm init -y
 # --save-dev で package.json に追加
 npm install --save-dev `
     textlint `
+    textlint-plugin-latex2e `
+    textlint-filter-rule-comments `
     textlint-rule-preset-ja-technical-writing `
     textlint-rule-preset-jtf-style `
     textlint-rule-preset-ja-spacing `
-    textlint-rule-spellcheck-tech-word `
-    textlint-plugin-latex2e
+    @proofdict/textlint-rule-proofdict
 npx textlint --init
 
 # Textlint 導入 (2回目以降)
