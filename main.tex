@@ -114,16 +114,15 @@
 
 \section{サンプル}
 
-\LaTeX で PDF を作成する。
-% 助詞の連続のエラー例
-textlint で文法ががェックできます。
-% である・ですます のエラー例
-本日は晴天である。
+\LaTeX で PDF が作成できます。
+textlint で文法がチェックできます。
+「本日はは晴天です。」のように助詞が連続すると warning が出ます。
+「本日は晴天である。」のように語尾の違いでも warning が出ます。
+proofdict を使うと「javascript」のような表記ゆれも確認できます。
 
-javascript。
-
-% itemize 環境などは ja-technical-writing の
-% 文章区切りがおかしくなるので無効化する
+itemize 環境などでは ja-technical-writing の
+文章区切りがおかしくなるので、
+コメントに textlint-disable を記載して無効化しておきます。
 % textlint-disable
 \begin{itemize}
   \item リンゴは赤
@@ -133,7 +132,7 @@ javascript。
 % textlint-enable
 
 AdS/CFT~\cite{maldacena1999large}
-の概要を図~\ref{fig:adscft}に示す。
+の概要を図~\ref{fig:adscft}に示します。
 \begin{figure}[tbp]
   \begin{center}
     \includegraphics[width=8cm]{img/sample.png}
@@ -141,9 +140,10 @@ AdS/CFT~\cite{maldacena1999large}
   \end{center}
   \label{fig:adscft}
 \end{figure}
-表の作り方を表~\ref{tab:sample}に示す。
+表の作り方を表~\ref{tab:sample}に示します。
 \begin{table}[tbp]
   \begin{center}
+    \caption{表の例}\label{tab:sample}
     \begin{tabular}{lcc}
       \toprule
       hoge & fuga & piyo \\
@@ -151,12 +151,10 @@ AdS/CFT~\cite{maldacena1999large}
       A    & B    & C    \\
       \bottomrule
     \end{tabular}
-    \caption{表の例}
   \end{center}
-  \label{tab:sample}
 \end{table}
 
-アルゴリズム体操はアルゴリズム~\ref{alg:excersise}に示す。
+アルゴリズム体操はアルゴリズム~\ref{alg:excersise}に示します。
 \begin{figure}[tbp]
   \begin{algorithm}[H]
     \caption{アルゴリズム体操}\label{alg:excersise}
@@ -170,7 +168,7 @@ AdS/CFT~\cite{maldacena1999large}
   \end{algorithm}
 \end{figure}
 インラインのコードブロックは\lstinline|sudo apt update|で書けます。
-ソースコードはソース~\ref{src:hello_world}に示す。
+ソースコードはソース~\ref{src:hello_world}に示します。
 \begin{figure}
   \begin{lstlisting}[caption=Hello World,label={src:hello_world},language=C]
     #include<stdio.h>
@@ -181,6 +179,7 @@ AdS/CFT~\cite{maldacena1999large}
   \end{lstlisting}
 \end{figure}
 
+\newpage
 \bibliography{reference}
 
 \end{document}

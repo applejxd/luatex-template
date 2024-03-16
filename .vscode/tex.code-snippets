@@ -17,6 +17,7 @@
     "body": [
       "\\begin{table}[tbp]",
       "  \\begin{center}",
+      "    \\caption{$2}\\label{tab:$3}",
       "    \\begin{tabular}{${1:lcc}}",
       "      \\toprule",
       "      $4 & & \\\\",
@@ -24,9 +25,7 @@
       "      & & \\\\",
       "      \\bottomrule",
       "    \\end{tabular}",
-      "    \\caption{$2}",
       "  \\end{center}",
-      "  \\label{tab:$3}",
       "\\end{table}",
     ],
     "description": ""
