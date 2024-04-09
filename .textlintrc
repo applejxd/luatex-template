@@ -11,12 +11,7 @@
     // cf. https://github.com/textlint-ja/extlint-rule-preset-ja-technical-writing
     "preset-ja-technical-writing": {
       // 誤作動防止のために指定
-      "no-mix-dearu-desumasu": true,
-      // 漢字の最大数
-      "max-kanji-continuous-len": {
-        "max": 8,
-        "allow": []
-      }
+      "no-mix-dearu-desumasu": true
     },
     // JTF日本語標準スタイルガイド
     // cf. https://github.com/textlint-ja/textlint-rule-preset-JTF-style
