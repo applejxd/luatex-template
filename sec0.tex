@@ -1,0 +1,160 @@
+
+\subsection{使用する公式の復習}
+
+昇降演算子 (ladder operator) $\hat{a},\hat{a}^\dagger$のリー代数は次の式。
+\begin{equation}
+  \label{eq:a_algebra}
+  [\hat{a},\hat{a}^\dagger] = 1
+  \tag{8.15}
+\end{equation}
+% textlint-disable
+エルミート演算子
+\begin{equation}
+  \hat{N}\equiv\hat{a}^\dagger\hat{a} \tag{8.7}
+\end{equation}
+と昇降演算子$\hat{a},\hat{a}^\dagger$のリー代数は次の式。
+% textlint-enable
+\begin{equation}
+  \begin{split}
+    &[\hat{N},\hat{a}^\dagger]
+    =\hat{a}^\dagger[\hat{a},\hat{a}^\dagger]
+    =\hat{a}^\dagger, \\
+    &[\hat{N},\hat{a}]
+    =[\hat{a}^\dagger\hat{a},\hat{a}]
+    =[\hat{a}^\dagger,\hat{a}]\hat{a}
+    =-\hat{a}
+  \end{split}
+\end{equation}
+このリー代数に対する$N-1$を最高ウェイトとする既約表現をもつ。
+これを最高ウェイト表現と呼ぶ。
+線形空間$\ab\{\sum_{i=0}^{N-1}k_i\ket{i}|k_i\in\mathbb{C}\}$に対する表現は次の式。
+\begin{align}
+   & \hat{a}\ket{N-1} = 0                       \\
+   & \hat{a}^\dagger\ket{n}=\sqrt{n+1}\ket{n+1}
+  \quad(n=0,1,\ldots,N-2)
+  \tag{8.2}                                     \\
+   & \hat{a}\ket{n}=\sqrt{n}\ket{n-1}
+  \quad(n=1,\ldots,N-1)
+  \tag{8.5}                                     \\
+   & \hat{N}\ket{n}=n\ket{n}
+  \tag{8.8}
+  \label{eq:number_op_repr}
+\end{align}
+この表現から線形空間の基底が次の式で書ける。
+\begin{equation}
+  \label{eq:num_eigenvec}
+  \ket{n}
+  =\frac{1}{\sqrt{n!}}(\hat{a}^\dagger)^n\ket{0}
+  \tag{8.4}
+\end{equation}
+
+位置演算子$\hat{x}$、運動量演算子$\hat{p}$の交換関係は以下。
+\begin{equation}
+  \label{eq:xp_alg}
+  [\hat{x},\hat{p}]=i\hbar
+  \tag{8.18}
+\end{equation}
+系を特徴づける長さ$L$を用いると
+位置演算子$\hat{x}$、運動量演算子$\hat{p}$から
+昇降演算子$\hat{a},\hat{a}$のリー代数をもつ演算子が作れる。
+\begin{equation}
+  \label{eq:xp2a}
+  \hat{a}=\frac{1}{\sqrt{2}}
+  \ab(\frac{\hat{x}}{L}+i\frac{L\hat{p}}{\hbar}),\quad
+  \hat{a}^\dagger=\frac{1}{\sqrt{2}}
+  \ab(\frac{\hat{x}}{L}-i\frac{L\hat{p}}{\hbar})
+  \tag{8.17}
+\end{equation}
+ただし昇降演算子$\hat{a},\hat{a}^\dagger$は無次元量。
+% textlint-disable
+これは換算プランク定数あるいは Dirac 定数が
+\begin{equation}
+  \begin{split}
+    \hbar\equiv\frac{h}{2\pi}
+    &= 1.054571817\ldots\times10^{-34}\si{J.s} \\
+    &= 6.582119569\ldots\times10^{-16}\si{eV.s}
+  \end{split}
+\end{equation}
+と定義され、運動エネルギー$K$の公式に対する次元解析が
+\begin{equation}
+  K=\frac{1}{2}mv^2
+  \Rightarrow[K]=ML^2T^{-2}
+\end{equation}
+となることから
+\begin{equation}
+  \ab[\frac{Lp}{\hbar}]
+  =\frac{[L][p]}{[\hbar]}
+  =\frac{L\cdot MLT^{-1}}{ML^2T^{-2}\cdot T}
+  = 1
+\end{equation}
+となって無次元になることが確かめられる。
+% textlint-enable
+逆に昇降演算子$\hat{a},\hat{a}^\dagger$から
+位置・運動量の単位をもつ次の演算子が定義できる。
+\begin{equation}
+  \label{eq:a2xp}
+  \hat{x}=\frac{L}{\sqrt{2}}(\hat{a}+\hat{a}^\dagger),\quad
+  \hat{p}=\frac{\hbar}{\sqrt{2}iL}(\hat{a}-\hat{a}^\dagger)
+  \tag{8.16}
+\end{equation}
+
+孤立系$S$のハミルトニアン$\hat{H}_S$から定まる
+状態$\ket{\psi(t)}_S$の時間発展は
+次のシュレディンガー方程式で記述される。
+\begin{equation}
+  \label{eq:schrodinger_eq}
+  i\hbar\odv{}{t}\ket{\psi(t)}_S
+  =\hat{H}_S(t)\ket{\psi(t)}_S
+  \tag{6.18}
+\end{equation}
+このように状態を時間依存させる記法を
+シュレディンガー描像と呼ぶ。
+
+孤立系$S$のハミルトニアン$\hat{H}_S$から定まる
+ハイゼンベルグ演算子$\hat{O}_H(t)$の時間発展は
+次のハイゼンベルグ方程式で記述される。
+\begin{equation}
+  \label{eq:heisenberg_eq}
+  \odv{}{t}\hat{O}_H(t)
+  =\frac{1}{i\hbar}\ab[\hat{O}_H(t),\hat{H}_H(t)]
+  \tag{6.36}
+\end{equation}
+このように演算子を時間依存させる記法を
+ハイゼンベルク描像と呼ぶ。
+
+運動量演算子の位置表示はデルタ関数の微分。
+\begin{equation}
+  \label{eq:p_in_x}
+  \braket{x|\hat{p}|x'}
+  =-i\hbar\pdv{}{x}\delta(x-x')
+  \tag{8.41}
+\end{equation}
+波動関数$\psi(x)=\braket{x|\psi}$に作用する位置表示の
+運動量演算子と位置演算子は次で定義。
+\begin{equation}
+  \vb{p}=-i\hbar\pdv{}{x},\quad
+  \vb{x}=x
+  \tag{8.43}
+\end{equation}
+これは次の意味。
+\begin{equation}
+  \begin{split}
+    &\hat{p}\ket{p}=p\ket{p}
+    \Rightarrow
+    \braket{x|\hat{p}|p}
+    =p\braket{x|p} \\
+    &\Leftrightarrow
+    p\braket{x|p}
+    =\braket{x|\hat{p}|p}
+    =\int_{-\infty}^\infty\d x'
+    \braket{x|\hat{p}|x'}\braket{x'|p}
+    =\int_{-\infty}^\infty\d x'
+    \ab(-i\hbar\pdv{}{x}\delta(x-x'))\braket{x'|p} \\
+    &\quad\,=
+    -i\hbar\pdv{}{x}
+    \int_{-\infty}^\infty\d x'
+    \delta(x-x')\braket{x'|p}
+    =-i\hbar\pdv{}{x}\braket{x|p}
+    =\vb{p}\braket{x|p}
+  \end{split}
+\end{equation}

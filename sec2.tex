@@ -1,0 +1,135 @@
+
+\subsection{シュレディンガー方程式の位置表示}
+
+(\ref{eq:H_xp})式の両方を$\ket{\psi(t)}$に作用させ、
+シュレディンガー方程式 (\ref{eq:schrodinger_eq}) 式を使用することで次式を得る。
+\begin{equation}
+  i\hbar\odv{}{t}\ket{\psi(t)}
+  =\hat{H}\ket{\psi(t)}
+  =\ab(\frac{1}{2m}\hat{p}^2+\frac{m\omega^2}{2}\hat{x}^2)\ket{\psi(t)}
+  \tag{9.7}
+\end{equation}
+この位置表示を求める。
+\begin{equation}
+  \begin{split}
+    \int\d x\ket{x}\bra{x}i\hbar\odv{}{t}\ket{\psi(t)}
+    &=\int\d x\ket{x}\bra{x}
+    \ab(\frac{1}{2m}\hat{p}^2+\frac{m\omega^2}{2}\hat{x}^2)\ket{\psi(t)} \\
+    i\hbar\pdv{}{t}\int\d x\ket{x}\braket{x|\psi(t)}
+    &=\int\d x\d x'\d x''
+    \frac{1}{2m}
+    \ket{x}\braket{x|\hat{p}|x''}\braket{x''|\hat{p}|x'}\braket{x'|\psi(t)} \\
+    &\quad+\int\d x \frac{m\omega^2}{2}x^2\ket{x}\braket{x|\psi(t)}
+  \end{split}
+\end{equation}
+ここで波動関数$\psi(t,x)=\braket{x|\psi(t)}$を用いて次を得る。
+\begin{equation}
+  \int\d x\ket{x}\ab(
+  i\hbar\pdv{}{t}\psi(t,x)
+  -\int\d x'\d x''
+  \frac{1}{2m}\braket{x|\hat{p}|x''}\braket{x''|\hat{p}|x'}\psi(t,x')
+  -\frac{m\omega^2}{2}x^2\psi(t,x))=0
+\end{equation}
+この式は$\forall\ket{x}$で成立する必要があるので、被積分関数は常に0。
+これより次の式を得る。
+\begin{equation}
+  \label{eq:harmonic_oscillator_middle}
+  i\hbar\pdv{}{t}\psi(t,x)
+  =
+  \int_{-\infty}^\infty\d x'\int_{-\infty}^\infty\d x''
+  \frac{1}{2m}\braket{x|\hat{p}|x''}\braket{x''|\hat{p}|x'}\psi(t,x')
+  +\frac{m\omega^2}{2}x^2\psi(t,x)
+  \tag{9.8}
+\end{equation}
+運動量演算子の位置表示 (\ref{eq:p_in_x}) 式を用いて次を得る。
+\begin{equation}
+  \begin{split}
+    i\hbar\pdv{}{t}\psi(t,x)
+    &=
+    \int_{-\infty}^\infty\d x'\int_{-\infty}^\infty\d x''
+    \frac{1}{2m}
+    \ab(-i\hbar\pdv{}{x}\delta(x-x''))\ab(-i\hbar\pdv{}{x''}\delta(x''-x'))
+    \psi(t,x') \\
+    &\qquad+\frac{m\omega^2}{2}x^2\psi(t,x) \\
+    &=
+    -\frac{\hbar^2}{2m}\pdv{}{x}
+    \int_{-\infty}^\infty\d x'\int_{-\infty}^\infty\d x''
+    \delta(x-x'')\ab(\pdv{}{x''}\delta(x''-x'))
+    \psi(t,x') \\
+    &\qquad+\frac{m\omega^2}{2}x^2\psi(t,x)
+  \end{split}
+\end{equation}
+このうちデルタ関数の微分を含む部分については、
+次の部分積分を用いた公式で評価できる。
+\begin{equation}
+  \begin{split}
+    &\int_{-\infty}^\infty\d x
+    \pdv{}{x}\ab(f(x)\delta(x))
+    = \int_{-\infty}^\infty\d x
+    \ab[
+      \ab(\pdv{}{x}f(x))\delta(x)
+      +f(x)\pdv{}{x}\delta(x)
+    ]\\
+    &\ab[f(x)\delta(x)]^{x=\infty}_{x=-\infty}
+    =
+    \int_{-\infty}^\infty\d x
+    \ab(\pdv{}{x}f(x))\delta(x)
+    +\int_{-\infty}^\infty\d x
+    f(x)\pdv{}{x}\delta(x) \\
+    &\int_{-\infty}^\infty\d x
+    f(x)\pdv{}{x}\delta(x)
+    =-
+    \int_{-\infty}^\infty\d x
+    \ab(\pdv{}{x}f(x))\delta(x)
+  \end{split}
+\end{equation}
+これより次の結果を得る。
+\begin{equation}
+  \begin{split}
+    &-\frac{\hbar^2}{2m}\pdv{}{x}
+    \int_{-\infty}^\infty\d x'\int_{-\infty}^\infty\d x''
+    \delta(x-x'')\ab(\pdv{}{x''}\delta(x''-x'))
+    \psi(t,x') \\
+    &=
+    \frac{\hbar^2}{2m}\pdv{}{x}
+    \int_{-\infty}^\infty\d x'\int_{-\infty}^\infty\d x''
+    \ab(\pdv{}{x''}\delta(x-x''))
+    \delta(x''-x')
+    \psi(t,x') \\
+    &=
+    \frac{\hbar^2}{2m}\pdv{}{x}
+    \int_{-\infty}^\infty\d x''
+    \ab(\pdv{}{x''}\delta(x-x''))
+    \psi(t,x'') \\
+    &=
+    -\frac{\hbar^2}{2m}\pdv{}{x}
+    \int_{-\infty}^\infty\d x''
+    \delta(x-x'')
+    \pdv{}{x''}\psi(t,x'') \\
+    &=-\frac{\hbar^2}{2m}\pdv[order={2}]{}{x}\psi(t,x)
+  \end{split}
+\end{equation}
+したがって (\ref{eq:harmonic_oscillator_middle}) 式は次に帰着する。
+\begin{equation}
+  \label{eq:harmonic_oscillator_schrodinger}
+  i\hbar\pdv{}{t}\psi(t,x)
+  =\ab(-\frac{\hbar^2}{2m}\pdv[order={2}]{}{x}+\frac{m\omega^2}{2}x^2)\psi(t,x)
+  \tag{9.9}
+\end{equation}
+シュレディンガー方程式としては
+位置表示の運動量・位置演算子$\hat{p},\hat{x}$を用いて次の形で書ける。
+\begin{align}
+   & \vb{H}=\frac{1}{2m}\vb{p}^2+\frac{m\omega^2}{2}\vb{x}^2 \\
+   \label{eq:harmonic_oscillator_H_in_x}
+   & i\hbar\pdv{}{t}\psi(t,x)=\vb{H}\psi(t,x) \tag{9.10}
+\end{align}
+ここで$\vb{H}$はハミルトニアン$\hat{H}$の位置表示である。
+また相互作用項は$\omega\rightarrow0$で消失し、
+自由粒子のシュレディンガー方程式へ帰着する。
+\begin{equation}
+  i\hbar\pdv{}{t}\psi(t,x)
+  =-\frac{\hbar^2}{2m}\pdv[order={2}]{}{x}\psi(t,x)
+  \tag{9.11}
+\end{equation}
+よって$\omega\simeq0$では$\omega$を摂動のパラメータとする
+摂動論が適用できて近似解が求まる。
