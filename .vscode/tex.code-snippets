@@ -5,7 +5,7 @@
     "body": [
       "\\begin{figure}[tbp]",
       "  \\begin{center}",
-      "    \\includegraphics[width=11cm]{img/${1:img}.png}",
+      "    \\includegraphics[width=11cm]{img/${1:img}}",
       "    \\caption{",
       "      ${2:caption}",
       "    }\\label{fig:$1}",
