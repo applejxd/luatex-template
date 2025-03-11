@@ -3,6 +3,7 @@
   "figure": {
     "prefix": "\\figure(center)",
     "body": [
+      "%textlint-disable%,
       "\\begin{figure}[tbp]",
       "  \\begin{center}",
       "    \\includegraphics[width=11cm]{img/${1:img}}",
@@ -11,12 +12,14 @@
       "    }\\label{fig:$1}",
       "  \\end{center}",
       "\\end{figure}",
+      "%textlint-enable"
     ],
     "description": "figure(center)"
   },
   "table": {
     "prefix": "\\table(center)",
     "body": [
+      "%textlint-disable%,
       "\\begin{table}[tbp]",
       "  \\begin{center}",
       "    \\caption{$2}\\label{tab:$3}",
@@ -29,6 +32,7 @@
       "    \\end{tabular}",
       "  \\end{center}",
       "\\end{table}",
+      "%textlint-enable"
     ],
     "description": ""
   },
