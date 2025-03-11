@@ -1,4 +1,4 @@
-// cf. https://migi.me/vsc_snippet/
+// see https://migi.me/vsc_snippet/
 {
   "figure": {
     "prefix": "\\figure(center)",
@@ -6,7 +6,9 @@
       "\\begin{figure}[tbp]",
       "  \\begin{center}",
       "    \\includegraphics[width=11cm]{img/${1:img}.png}",
-      "    \\caption{${2:caption}}\\label{fig:$1}",
+      "    \\caption{",
+      "      ${2:caption}",
+      "    }\\label{fig:$1}",
       "  \\end{center}",
       "\\end{figure}",
     ],
@@ -31,7 +33,7 @@
     "description": ""
   },
   // 選択して補完で textlint 無効
-  // cf. https://zenn.dev/oksongh/scraps/0c7046ef265941
+  // see https://zenn.dev/oksongh/scraps/0c7046ef265941
   "textlint-disable": {
     "prefix": "textlint-disable",
     "body": [
