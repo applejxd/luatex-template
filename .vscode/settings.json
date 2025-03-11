@@ -16,6 +16,7 @@
     //-------//
     // LaTeX //
     //-------//
+    "latex-workshop.formatting.latex": "latexindent",
     // タイプセット定義
     "latex-workshop.latex.recipes": [
         {
