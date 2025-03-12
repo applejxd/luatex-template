@@ -4,6 +4,7 @@
         "james-yu.latex-workshop",
         "usernamehw.errorlens",
         "yzhang.markdown-all-in-one",
-        "davidanson.vscode-markdownlint"
+        "davidanson.vscode-markdownlint",
+        "hediet.vscode-drawio"
     ]
 }
